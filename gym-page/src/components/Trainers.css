@@ -1,0 +1,311 @@
+
+        .trainers {
+          position: relative;
+          padding: 60px 0;
+          background: var(--grey-900);
+        }
+
+        .trainers__bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+        }
+
+        .trainers__gradient {
+          width: 400px;
+          height: 400px;
+          background: #77060B;
+          filter: blur(100px);
+          position: absolute;
+          right: -200px;
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: 0.3;
+        }
+
+        .trainers__header {
+          text-align: center;
+          margin-bottom: 50px;
+        }
+
+        .trainers__title {
+          font-size: clamp(28px, 4vw, 40px);
+          font-weight: 700;
+          margin: 0;
+        }
+
+        .trainers__content {
+          display: grid;
+          grid-template-columns: 1fr 300px;
+          gap: 50px;
+          align-items: center;
+        }
+
+        .trainer-showcase {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          padding: 30px;
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .trainer-showcase__image {
+          position: relative;
+          width: 200px;
+          height: 250px;
+          border-radius: 16px;
+          overflow: hidden;
+          flex-shrink: 0;
+        }
+
+        .trainer-showcase__image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .trainer-showcase__rating {
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          padding: 6px 10px;
+          background: rgba(0, 0, 0, 0.7);
+          backdrop-filter: blur(10px);
+          border-radius: 15px;
+          color: white;
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .trainer-showcase__info {
+          flex: 1;
+        }
+
+        .trainer-name {
+          font-size: 28px;
+          font-weight: 700;
+          color: var(--white);
+          margin: 0 0 8px 0;
+        }
+
+        .trainer-role {
+          font-size: 16px;
+          color: var(--red-500);
+          margin: 0 0 12px 0;
+          font-weight: 500;
+        }
+
+        .trainer-specialty {
+          font-size: 14px;
+          color: var(--white);
+          opacity: 0.8;
+          margin: 0 0 8px 0;
+        }
+
+        .trainer-description {
+          font-size: 14px;
+          color: var(--white);
+          opacity: 0.8;
+          margin: 0 0 20px 0;
+          line-height: 1.5;
+        }
+
+        .trainer-certifications {
+          margin-bottom: 20px;
+        }
+
+        .trainer-certifications h4 {
+          font-size: 14px;
+          color: var(--red-500);
+          margin: 0 0 8px 0;
+          font-weight: 600;
+        }
+
+        .cert-badges {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .cert-badge {
+          padding: 4px 12px;
+          background: rgba(217, 10, 20, 0.2);
+          border: 1px solid rgba(217, 10, 20, 0.4);
+          border-radius: 20px;
+          font-size: 12px;
+          color: var(--white);
+          font-weight: 500;
+        }
+
+        .trainer-stats {
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+
+        .stat-item {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          padding: 8px 12px;
+          background: rgba(217, 10, 20, 0.1);
+          border: 1px solid rgba(217, 10, 20, 0.3);
+          border-radius: 8px;
+          min-width: fit-content;
+        }
+
+        .stat-label {
+          font-size: 10px;
+          color: var(--white);
+          opacity: 0.7;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .stat-value {
+          font-size: 12px;
+          color: var(--white);
+          font-weight: 600;
+        }
+
+        .trainers__list {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .trainer-item {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          padding: 16px;
+          background: rgba(255, 255, 255, 0.03);
+          border-radius: 12px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          position: relative;
+          border: 1px solid transparent;
+        }
+
+        .trainer-item:hover {
+          background: rgba(255, 255, 255, 0.08);
+        }
+
+        .trainer-item--active {
+          background: rgba(217, 10, 20, 0.1);
+          border-color: rgba(217, 10, 20, 0.3);
+        }
+
+        .trainer-item__avatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+          flex-shrink: 0;
+        }
+
+        .trainer-item__avatar img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .trainer-item__info {
+          flex: 1;
+        }
+
+        .trainer-item__info h4 {
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--white);
+          margin: 0 0 4px 0;
+        }
+
+        .trainer-item__info p {
+          font-size: 12px;
+          color: var(--white);
+          opacity: 0.7;
+          margin: 0;
+        }
+
+        .trainer-item__indicator {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.3);
+          transition: all 0.3s ease;
+        }
+
+        .trainer-item--active .trainer-item__indicator {
+          background: var(--red-500);
+          transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+          .trainers__content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+          }
+
+          .trainer-showcase {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+            padding: 24px;
+          }
+
+          .trainer-showcase__image {
+            width: 150px;
+            height: 200px;
+          }
+
+          .trainer-name {
+            font-size: 24px;
+          }
+
+          .trainers__list {
+            flex-direction: row;
+            overflow-x: auto;
+            gap: 12px;
+            padding: 0 0 10px 0;
+          }
+
+          .trainer-item {
+            min-width: 200px;
+            flex-shrink: 0;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .trainers {
+            padding: 40px 0;
+          }
+
+          .trainer-showcase {
+            padding: 20px;
+          }
+
+          .trainer-showcase__image {
+            width: 120px;
+            height: 160px;
+          }
+
+          .trainer-name {
+            font-size: 20px;
+          }
+
+          .trainer-item {
+            min-width: 180px;
+            padding: 12px;
+          }
+        }
+      

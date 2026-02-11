@@ -1,0 +1,119 @@
+.gymFloatingCTA {
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  z-index: 2147483647 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.ctaButton {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 14px 24px !important;
+  border-radius: 50px !important;
+  background: linear-gradient(135deg, #FF6B35 0%, #D90A14 100%) !important;
+  border: none !important;
+  cursor: pointer !important;
+  box-shadow: 0 10px 30px rgba(217, 10, 20, 0.5) !important;
+  transition: all 0.3s ease !important;
+  animation: floatUp 3s ease-in-out infinite !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.ctaButton:hover {
+  transform: scale(1.08) translateY(-4px) !important;
+  box-shadow: 0 15px 40px rgba(217, 10, 20, 0.7) !important;
+}
+
+.ctaIcon {
+  color: #FFFFFF !important;
+  flex-shrink: 0 !important;
+}
+
+.ctaText {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+
+.ctaMainText {
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  line-height: 1 !important;
+}
+
+.ctaBadge {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  line-height: 1 !important;
+}
+
+.ctaTooltip {
+  position: absolute !important;
+  right: 100% !important;
+  top: 50% !important;
+  transform: translateY(-50%) translateX(-12px) !important;
+  background: rgba(0, 0, 0, 0.9) !important;
+  color: #FFFFFF !important;
+  padding: 10px 16px !important;
+  border-radius: 12px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.gymFloatingCTA:hover .ctaTooltip {
+  opacity: 1 !important;
+  transform: translateY(-50%) translateX(0) !important;
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .gymFloatingCTA {
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+
+  .ctaButton {
+    padding: 12px 20px !important;
+  }
+
+  .ctaIcon {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .ctaMainText {
+    font-size: 14px !important;
+  }
+
+  .ctaBadge {
+    font-size: 10px !important;
+  }
+
+  .ctaTooltip {
+    display: none !important;
+  }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#D90A14" />
+    
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Premium Fonts - Optimized -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Performance Optimization -->
+    <link rel="preload" href="/static/css/main.css" as="style">
+    <link rel="preload" href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" as="image">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Image optimization -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <!-- Critical CSS inlined -->
+    <style>
+      body { margin: 0; background: #1a1a1a; color: white; font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+      img { 
+        image-rendering: -webkit-optimize-contrast; 
+        image-rendering: crisp-edges;
+        loading: lazy;
+        decoding: async;
+        max-width: 100%;
+        height: auto;
+      }
+      .lazy-image { 
+        background: #333;
+        min-height: 200px;
+        background-image: linear-gradient(45deg, #333 25%, transparent 25%), linear-gradient(-45deg, #333 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #333 75%), linear-gradient(-45deg, transparent 75%, #333 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        animation: loading 1.5s infinite;
+      }
+      @keyframes loading {
+        0% { opacity: 0.6; }
+        50% { opacity: 1; }
+        100% { opacity: 0.6; }
+      }
+      /* Image compression hints */
+      img[src$=".jpg"], img[src$=".jpeg"] { image-rendering: optimizeQuality; }
+      img[src$=".webp"] { image-rendering: optimizeSpeed; }
+    </style>
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>FitMaker Gym - Premium Fitness Center | 10K+ Members | Expert Trainers</title>
+    <meta name="description" content="Join FitMaker Gym - India's premier fitness center with 10,000+ active members, 50+ certified trainers, and world-class equipment. Transform your body with personalized training programs. 24/7 access available." />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="gym near me, fitness center, personal training, FitMaker gym, gym membership, weight training, cardio workout, yoga classes, nutrition coaching, 24/7 gym, premium gym India" />
+    <meta name="author" content="FitMaker Gym" />
+    <meta name="robots" content="index, follow" />
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="India" />
+    <link rel="canonical" href="https://fitmaker.com" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="FitMaker Gym - Premium Fitness Center | 10K+ Members" />
+    <meta property="og:description" content="Join India's premier fitness center with 50+ expert trainers, world-class equipment, and proven results. Transform your body today!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fitmaker.com" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:site_name" content="FitMaker Gym" />
+    <meta property="og:locale" content="en_IN" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FitMaker Gym - Premium Fitness Center" />
+    <meta name="twitter:description" content="Join 10K+ members at India's premier gym. Expert trainers, world-class equipment, proven results. Start your transformation today!" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta name="twitter:site" content="@FitMakerGym" />
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Gym",
+      "name": "FitMaker Gym",
+      "description": "Premium fitness center with 10,000+ members, 50+ certified trainers, world-class equipment, and personalized training programs.",
+      "url": "https://fitmaker.com",
+      "telephone": "+91-XXXX-XXXXXX",
+      "email": "info@fitmaker.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Your Gym Address",
+        "addressLocality": "Your City",
+        "addressRegion": "Your State",
+        "postalCode": "XXXXXX",
+        "addressCountry": "IN"
+      },
+      "openingHours": "Mo-Su 05:00-23:00",
+      "priceRange": "₹₹",
+      "image": "https://fitmaker.com/og-image.jpg",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "500"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Gym Membership Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Starter Membership"
+            },
+            "price": "799",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Popular Membership"
+            },
+            "price": "999",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Premium Membership"
+            },
+            "price": "1999",
+            "priceCurrency": "INR"
+          }
+        ]
+      }
+    }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='brandBg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%231a1a1a'/%3E%3Cstop offset='50%25' stop-color='%23D90A14'/%3E%3Cstop offset='100%25' stop-color='%23000000'/%3E%3C/linearGradient%3E%3ClinearGradient id='brandText' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FFFFFF'/%3E%3Cstop offset='50%25' stop-color='%23FF6B35'/%3E%3Cstop offset='100%25' stop-color='%23FFFFFF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='14' fill='url(%23brandBg)' stroke='%23D90A14' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='url(%23brandText)' stroke-width='1' opacity='0.6'/%3E%3Ctext x='16' y='20' text-anchor='middle' fill='url(%23brandText)' font-size='12' font-weight='900' font-family='Arial, sans-serif'%3EFM%3C/text%3E%3Ccircle cx='16' cy='4' r='1.5' fill='%23FF6B35' opacity='0.8'/%3E%3Ccircle cx='16' cy='28' r='1.5' fill='%23FF6B35' opacity='0.8'/%3E%3Ccircle cx='4' cy='16' r='1.5' fill='%23D90A14' opacity='0.8'/%3E%3Ccircle cx='28' cy='16' r='1.5' fill='%23D90A14' opacity='0.8'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

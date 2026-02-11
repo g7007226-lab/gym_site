@@ -1,0 +1,314 @@
+
+        .why-choose-us {
+          position: relative;
+          padding: var(--section-padding) 0;
+          background: var(--grey-900);
+          overflow: hidden;
+        }
+
+        .why-choose-us__bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: -1;
+        }
+
+        .why-choose-us__gradient {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(150px);
+          opacity: 0.3;
+        }
+
+        .why-choose-us__gradient--1 {
+          width: 500px;
+          height: 500px;
+          background: #D90A14;
+          top: 20%;
+          left: -250px;
+        }
+
+        .why-choose-us__gradient--2 {
+          width: 400px;
+          height: 400px;
+          background: #CD4E17;
+          bottom: 20%;
+          right: -200px;
+        }
+
+        .why-choose-us__header {
+          text-align: center;
+          margin-bottom: 80px;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .why-choose-us__title {
+          font-size: clamp(32px, 5vw, 48px);
+          font-weight: 700;
+          line-height: 1.2;
+          margin: 0 0 24px 0;
+        }
+
+        .why-choose-us__description {
+          font-size: 18px;
+          color: var(--white);
+          opacity: 0.9;
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        .why-choose-us__grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+          margin-bottom: 60px;
+        }
+
+        .reason-card {
+          position: relative;
+          text-align: center;
+          padding: 32px 24px;
+          background: rgba(255, 255, 255, 0.03);
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          border: 1px solid rgba(217, 10, 20, 0.2);
+          transition: all 0.3s ease;
+          cursor: pointer;
+          overflow: hidden;
+        }
+
+        .reason-card::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(217, 10, 20, 0.1), transparent);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .reason-card:hover::before {
+          opacity: 1;
+        }
+
+        .reason-card:hover {
+          border-color: #D90A14;
+          box-shadow: 0 15px 40px rgba(217, 10, 20, 0.3);
+          transform: translateY(-8px);
+        }
+
+        .reason-card__icon {
+          width: 64px;
+          height: 64px;
+          background: linear-gradient(135deg, #D90A14, #FF6B35);
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          margin: 0 auto 20px;
+          box-shadow: 0 10px 30px rgba(217, 10, 20, 0.4);
+          transition: all 0.3s ease;
+        }
+
+        .reason-card:hover .reason-card__icon {
+          transform: scale(1.1) rotate(5deg);
+          box-shadow: 0 15px 40px rgba(217, 10, 20, 0.6);
+        }
+
+        .reason-card__content {
+          position: relative;
+          z-index: 1;
+        }
+
+        .reason-card__title {
+          font-size: 18px;
+          font-weight: 700;
+          color: #fff;
+          margin: 0 0 12px 0;
+          line-height: 1.3;
+        }
+
+        .reason-card__description {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.7);
+          line-height: 1.6;
+          margin: 0;
+        }
+
+        .reason-card__glow {
+          position: absolute;
+          top: -50%;
+          right: -50%;
+          width: 100px;
+          height: 100px;
+          background: radial-gradient(circle, rgba(217, 10, 20, 0.1) 0%, transparent 70%);
+          border-radius: 50%;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .reason-card:hover .reason-card__glow {
+          opacity: 1;
+        }
+
+        .why-choose-us__cta {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .cta-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          padding: 18px 36px;
+          background: linear-gradient(135deg, var(--red-500), var(--orange-500));
+          color: white;
+          border: none;
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 10px 40px rgba(217, 10, 20, 0.4);
+          position: relative;
+          overflow: hidden;
+          width: auto;
+        }
+
+        .cta-button::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+          left: 100%;
+        }
+
+        .cta-button__icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover .cta-button__icon {
+          transform: translateX(4px);
+        }
+
+        @media (max-width: 1024px) {
+          .why-choose-us__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .why-choose-us {
+            padding: 60px 0;
+          }
+
+          .why-choose-us__header {
+            margin-bottom: 60px;
+          }
+
+          .why-choose-us__title {
+            font-size: clamp(28px, 6vw, 36px);
+          }
+
+          .why-choose-us__description {
+            font-size: 16px;
+          }
+
+          .why-choose-us__grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 60px;
+          }
+
+          .reason-card {
+            padding: 24px;
+            gap: 16px;
+          }
+
+          .reason-card__icon {
+            width: 56px;
+            height: 56px;
+          }
+
+          .reason-card__title {
+            font-size: 18px;
+          }
+
+          .cta-button {
+            padding: 16px 32px;
+            font-size: 16px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .why-choose-us {
+            padding: 40px 0;
+          }
+
+          .why-choose-us__header {
+            margin-bottom: 40px;
+          }
+
+          .why-choose-us__title {
+            font-size: clamp(24px, 7vw, 32px);
+          }
+
+          .why-choose-us__description {
+            font-size: 14px;
+          }
+
+          .why-choose-us__grid {
+            margin-bottom: 40px;
+          }
+
+          .reason-card {
+            padding: 20px;
+            gap: 12px;
+          }
+
+          .reason-card__icon {
+            width: 48px;
+            height: 48px;
+          }
+
+          .reason-card__title {
+            font-size: 16px;
+          }
+
+          .reason-card__description {
+            font-size: 13px;
+          }
+
+          .cta-button {
+            padding: 14px 28px;
+            font-size: 14px;
+          }
+
+          .cta-button__icon {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      

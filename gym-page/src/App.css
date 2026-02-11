@@ -1,0 +1,25 @@
+/* Force WhatsApp button visibility - CRITICAL */
+body > div[class*="gymFloatingCTA"],
+#root > div[class*="gymFloatingCTA"],
+.app > div[class*="gymFloatingCTA"],
+[class*="gymFloatingCTA"] {
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  z-index: 2147483647 !important;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateZ(0) !important;
+}
+
+@media (max-width: 768px) {
+  body > div[class*="gymFloatingCTA"],
+  #root > div[class*="gymFloatingCTA"],
+  .app > div[class*="gymFloatingCTA"],
+  [class*="gymFloatingCTA"] {
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+}
