@@ -15,6 +15,8 @@ FROM nginx:alpine
 # Copy the compiled static assets from the builder stage
 COPY --from=builder /app/build /usr/share/nginx/html
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 # Expose port 80 for web traffic
 EXPOSE 80
 
