@@ -3,7 +3,7 @@ FROM node:20-slim AS builder
 WORKDIR /app
 
 # Cache dependencies
-COPY package*.json ./
+COPY gym-page/package*.json ./
 RUN npm ci
 
 # Copy source code and build the React app
